@@ -2,12 +2,12 @@ name: berflow
 
 services:
   berflow:
-    build: .
+    image: ghcr.io/klarak777/b-rflow:latest
     container_name: berflow-app
     restart: unless-stopped
     ports:
       - "3100:3000"
-    mem_limit: 400m
+    mem_limit: 300m
     networks:
       - berflow-net
 
