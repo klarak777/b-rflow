@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html lang="hu"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#0053db","on-secondary-container":"#00714e","secondary-fixed":"#85f8c4","on-primary-fixed":"#00174b","outline":"#737686","inverse-primary":"#b4c5ff","on-secondary-fixed-variant":"#005137","surface-variant":"#dae2fd","background":"#faf8ff","primary":"#004ac6","surface-container-high":"#e2e7ff","on-error":"#ffffff","on-primary":"#ffffff","secondary-container":"#82f5c1","tertiary-fixed":"#ffdcc3","inverse-surface":"#283044","outline-variant":"#c3c6d7","on-surface-variant":"#434655","on-background":"#131b2e","tertiary":"#824500","surface-container-low":"#f2f3ff","primary-container":"#2563eb","on-primary-container":"#eeefff","surface-dim":"#d2d9f4","secondary-fixed-dim":"#68dba9","secondary":"#006c4a","primary-fixed-dim":"#b4c5ff","error-container":"#ffdad6","inverse-on-surface":"#eef0ff","on-surface":"#131b2e","on-error-container":"#93000a","on-secondary":"#ffffff","on-secondary-fixed":"#002114","error":"#ba1a1a","primary-fixed":"#dbe1ff","surface-container":"#eaedff","tertiary-fixed-dim":"#ffb77d","surface-container-highest":"#dae2fd","surface-bright":"#faf8ff","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#003ea8","on-tertiary-fixed":"#2f1500","on-tertiary-container":"#ffede1","tertiary-container":"#a65900","on-tertiary":"#ffffff","surface":"#faf8ff","on-tertiary-fixed-variant":"#6e3900"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-sm":"0.5rem",gutter:"1rem","space-lg":"1rem","space-xl":"1.5rem","space-md":"0.75rem","space-xs":"0.25rem","gutter-compact":"0.5rem",margin:"1.5rem"},fontFamily:{"numeric-kpi":["Inter"],"headline-xl":["Inter"],"numeric-table":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"]},fontSize:{"numeric-kpi":["22px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"700"}],"numeric-table":["13px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-md":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-inverse-surface z-50 flex flex-col justify-between text-inverse-on-surface border-r border-outline/20"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline/20"><img alt="BérFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WJNKvHs-_nRvc3qrlB198K92d2nfngtJGOEyZ4odrbOOM88WKRvN-YHbofu7OUuxFwZ_R39ub3PagK4nl_IAsrIrtWREjKdQesxui7TUsPhqxfJOcd7kMBbHz60xbnl9bAxcL0a6kDbVBd24PuL0vOaXYEUOXenAkoT4pDd9Di95ldD6UgwBLjT29ZjyFUof0RKKabbG2xxdvMzcIV_HpzIflDwu0x_Sv5oUrUBnZkkiRPQuxjYTo4p_rT"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-white leading-tight">BérFlow</span><span class="font-label-sm text-label-sm text-outline-variant leading-none">Smart Payroll & EFO</span></div></div><div class="p-space-md border-b border-outline/20"><div class="bg-on-background/40 hover:bg-on-background/60 rounded-lg p-space-sm cursor-pointer transition-colors border border-outline/30 flex items-center justify-between"><div class="flex flex-col min-w-0 pr-space-xs"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse shrink-0"></span><span class="font-headline-md text-body-sm text-white truncate font-medium">MINTA Kft. (MINTA01)</span></div><span class="font-label-sm text-label-sm text-outline-variant pl-3.5">Adószám: 12345678-2-41</span></div><span class="material-symbols-outlined text-outline-variant text-base shrink-0">unfold_more</span></div></div><nav class="flex flex-col gap-0.5 px-space-xs py-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold border-l-4 border-secondary-fixed"><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary-container font-semibold border-l-4 border-secondary-fixed" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-body-md text-body-md">Irányítópult</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-outline-variant hover:bg-on-background/30 hover:text-white transition-colors" data-path="digitalis-beleptetes" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">person_add</span><span class="font-body-md text-body-md">Digitális Beléptetés</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold leading-none">3 új</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-outline-variant hover:bg-on-background/30 hover:text-white transition-colors" data-path="efo-napi-naplo" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">assignment_turned_in</span><span class="font-body-md text-body-md">EFO Napi Napló</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-outline-variant hover:bg-on-background/30 hover:text-white transition-colors" data-path="munkaido-es-tuldora" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">schedule</span><span class="font-body-md text-body-md">Munkaidő & Túlóra</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-outline-variant hover:bg-on-background/30 hover:text-white transition-colors" data-path="berszamfejtes-es-zaras" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">payments</span><span class="font-body-md text-body-md">Bérszámfejtés & Zárás</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-outline-variant hover:bg-on-background/30 hover:text-white transition-colors" data-path="konyvelesi-feladas" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">account_balance</span><span class="font-body-md text-body-md">Könyvelési Feladás</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-outline-variant hover:bg-on-background/30 hover:text-white transition-colors" data-path="beallitasok" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">settings</span><span class="font-body-md text-body-md">Beállítások</span></div></a></nav></div><div class="p-space-md border-t border-outline/20"><div class="flex items-center gap-space-xs text-outline-variant"><span class="w-2 h-2 rounded-full bg-secondary-fixed shrink-0"></span><span class="font-label-sm text-label-sm leading-tight text-outline-variant">NAV API v3.0 Kapcsolat: <span class="text-white font-medium">Rendben</span></span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur border-b border-surface-container-high z-40 px-space-xl flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-lg flex-1"><div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Cégek</span><span class="material-symbols-outlined text-sm text-outline">chevron_right</span><span class="hover:text-on-surface cursor-pointer">MINTA Kft.</span><span class="material-symbols-outlined text-sm text-outline">chevron_right</span><span class="text-primary font-semibold">EFO és Bér Irányítópult</span></div><div class="relative w-80 max-w-sm hidden lg:block"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-lg">search</span><input class="w-full h-9 pl-9 pr-14 bg-surface-container-low border border-surface-container-high rounded text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Keresés dolgozóra, TAJ számra, adóazonosítóra..." type="text"/><kbd class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface-variant border border-outline-variant/40 leading-none">Ctrl + K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-1.5 px-space-sm py-1 bg-secondary-container/30 border border-secondary-fixed rounded-full"><span class="w-2 h-2 rounded-full bg-secondary shrink-0 animate-ping"></span><span class="font-label-sm text-label-sm text-on-secondary-container font-medium">NAV Online Kapcsolat: Aktív (Szinkronizálva: 5 perce)</span></div><button class="h-9 px-space-md bg-primary-container hover:bg-primary text-on-primary font-headline-md text-label-md rounded flex items-center gap-1.5 transition-colors shadow-sm"><span class="material-symbols-outlined text-base">add</span><span>Új dolgozó beléptetése</span></button><div class="relative cursor-pointer p-1.5 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-2xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full ring-2 ring-surface-container-lowest"></span></div><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLfXc0Idch-cJc3KfxOyLZFlK2vU9XPc9HKpe-7f-QvWLezWZmtnFSFkTFJNW-RGLKdztsPvvqPDA61I_hu2y6u96uIUpneFYNkaHQkcvkGg-uZ2gAdoh3E0RDm0J9pEkzUiA-RqeJz_44admhapz07hn3q-3PzYhoPg0Ke3_QNSi9kA6Gjepjrafp3vkrZ80lDSx9nSj1J5pC6M9MGRDELr26jNMa752jHwuAj0uRsSbsXWzIUrnkQQ"/><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Könyvelő Andrea</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Senior Bérszámfejtő</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1 px-space-xl py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- SECTION 1: TOP HEADER & ACTIONS -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-outline-variant/30">
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-2">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">EFO Napi Menedzser & Bérszámfejtési Kontroll</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          2026. Szeptember (Aktív elszámolási időszak)
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Jogszabályi előszűrés, automatikus NAV limitfigyelés és digitális T1041-es szinkronizáció</p>
+</div>
+<!-- Quick Export Dropdowns & Batches -->
+<div class="flex items-center flex-wrap gap-2">
+<button class="h-9 px-3 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded border border-outline-variant/40 flex items-center gap-1.5 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base text-primary">download</span>
+<span>NAV XML Export</span>
+</button>
+<button class="h-9 px-3 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded border border-outline-variant/40 flex items-center gap-1.5 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base text-outline">picture_as_pdf</span>
+<span>PDF Jelenléti ív</span>
+</button>
+<button class="h-9 px-3 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded border border-outline-variant/40 flex items-center gap-1.5 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base text-secondary">account_balance_wallet</span>
+<span>Banki átutalás (HCT)</span>
+</button>
+</div>
+</div>
+<!-- SECTION 2: HIGH-DENSITY STATUTORY KPI METRICS (GRID 4) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI Card 1: Aktív Munkavállalók -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-outline-variant/30 flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Aktív Munkavállalók</span>
+<span class="font-numeric-kpi text-numeric-kpi text-on-surface mt-1">148 <span class="text-sm font-normal text-on-surface-variant">fő</span></span>
+</div>
+<div class="w-9 h-9 rounded bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">badge</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-label-sm border-t border-outline-variant/20 pt-2.5">
+<span class="text-on-surface-variant">+3 belépő ezen a héten</span>
+<span class="inline-flex items-center text-secondary font-bold gap-0.5">
+<span class="material-symbols-outlined text-xs">trending_up</span>+2.1%
+        </span>
+</div>
+</div>
+<!-- KPI Card 2: EFO Napi Keret -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">EFO Napi Keret (Mai nap)</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-numeric-kpi text-numeric-kpi text-on-surface">12</span>
+<span class="text-sm font-semibold text-on-surface-variant">/ 18 fő</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded bg-secondary-fixed/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-xl">group_work</span>
+</div>
+</div>
+<div class="mt-2.5 flex flex-col gap-1.5">
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 66.6%;"></div>
+</div>
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">66% kapacitás</span>
+<span class="text-secondary font-semibold">Még 6 fő regisztrálható ma</span>
+</div>
+</div>
+</div>
+<!-- KPI Card 3: Havi Jóváhagyott Túlóra -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Havi Jóváhagyott Túlóra</span>
+<span class="font-numeric-kpi text-numeric-kpi text-on-surface mt-1">684 <span class="text-sm font-normal text-on-surface-variant">óra</span></span>
+</div>
+<div class="w-9 h-9 rounded bg-tertiary-fixed/60 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl">more_time</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-label-sm border-t border-outline-variant/20 pt-2.5">
+<span class="text-error font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">warning</span> 8 fő > 250h limit közelében
+        </span>
+<span class="text-tertiary font-bold">+31.3% hó/hó</span>
+</div>
+</div>
+<!-- KPI Card 4: Számfejtési Előellenőrzés -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Számfejtési Előellenőrzés</span>
+<span class="font-numeric-kpi text-numeric-kpi text-on-surface mt-1">32 <span class="text-xs font-normal text-on-surface-variant">szabály futtatva</span></span>
+</div>
+<div class="w-9 h-9 rounded bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-xl">policy</span>
+</div>
+</div>
+<div class="mt-2.5 flex items-center gap-1.5 flex-wrap">
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed/50 text-on-secondary-container font-label-sm text-label-sm font-bold">29 OK</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-bold">2 Figyelem</span>
+<span class="px-1.5 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-bold flex items-center gap-0.5 animate-pulse">
+<span class="material-symbols-outlined text-xs">gpp_bad</span> 1 Tiltó hiba
+        </span>
+</div>
+</div>
+</div>
+<!-- SECTION 3: CENTRAL WORKSPACE (MAIN TABLE + SLIDE-OVER REVIEW PANEL) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- COLUMN A: MAIN EFO TABLE WORKSPACE (Approx. 70%) -->
+<div class="lg:col-span-8 flex flex-col bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/30 overflow-hidden">
+<!-- Subheader & Dynamic Filter Controls -->
+<div class="p-space-md border-b border-outline-variant/20 flex flex-col gap-space-sm bg-surface-bright">
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">event_available</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">EFO Napi Rögzítő és Jogszabályi Előkontroll</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-2.5 bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md rounded flex items-center gap-1 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base">person_add</span>
+<span>+ Új EFO dolgozó</span>
+</button>
+<button class="h-8 px-3 bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-md text-label-md rounded flex items-center gap-1 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-base">cloud_upload</span>
+<span>Csoportos NAV beküldés (11)</span>
+</button>
+</div>
+</div>
+<!-- Filter Bar Row -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-outline-variant/20">
+<!-- Date selector controls -->
+<div class="flex items-center gap-1 bg-surface-container-low rounded p-0.5 border border-outline-variant/40">
+<button class="w-7 h-7 flex items-center justify-center hover:bg-surface-container rounded text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<div class="flex items-center gap-1.5 px-2">
+<span class="material-symbols-outlined text-xs text-primary">calendar_today</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">2026. Szeptember 24. (Csütörtök)</span>
+</div>
+<button class="w-7 h-7 flex items-center justify-center hover:bg-surface-container rounded text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+<button class="px-2 py-0.5 text-xs font-semibold text-primary hover:bg-primary/10 rounded transition-colors ml-1">Ma</button>
+</div>
+<!-- Location Selector -->
+<div class="flex items-center gap-2">
+<div class="relative">
+<select class="h-8 pl-8 pr-7 bg-surface-container-low border border-outline-variant/40 rounded text-label-md font-label-md text-on-surface focus:outline-none focus:border-primary appearance-none cursor-pointer">
+<option>Győr - Gyár (1. üzem)</option>
+<option>Budapest - Központi Raktár</option>
+<option>Kecskemét - Összeszerelő Sor</option>
+</select>
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-xs text-outline">factory</span>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-xs text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Status Filter Tabs -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded border border-outline-variant/30 font-label-sm text-label-sm">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-bold shadow-xs">Összes (12)</button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container">Kész (9)</button>
+<button class="px-2 py-1 rounded text-tertiary hover:bg-tertiary-fixed/30 font-semibold">Figyelmeztetés (2)</button>
+<button class="px-2 py-1 rounded text-error hover:bg-error-container font-semibold">Hibás (1)</button>
+</div>
+</div>
+</div>
+<!-- High-Density Data Table Wrapper -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[760px]">
+<thead>
+<tr class="bg-surface-container-low/70 border-b border-outline-variant/30 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider h-8">
+<th class="py-2 px-3 font-semibold w-8">
+<input checked="" class="w-3.5 h-3.5 rounded border-outline cursor-pointer accent-primary" type="checkbox"/>
+</th>
+<th class="py-2 px-3 font-semibold">Dolgozó & Azonosítók</th>
+<th class="py-2 px-3 font-semibold">EFO Típus</th>
+<th class="py-2 px-3 font-semibold w-36">NAV 120 Nap Limit</th>
+<th class="py-2 px-3 font-semibold">Munkaidő</th>
+<th class="py-2 px-3 font-semibold text-right">Bruttó Bér</th>
+<th class="py-2 px-3 font-semibold">Kedvezmény</th>
+<th class="py-2 px-3 font-semibold">Jogszabályi Státusz</th>
+<th class="py-2 px-3 font-semibold text-right">Művelet</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Kovács János (Approved) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors h-11">
+<td class="py-2 px-3">
+<input checked="" class="w-3.5 h-3.5 rounded border-outline cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-bold text-on-surface">Kovács János</span>
+<div class="flex items-center gap-2 text-outline font-numeric-table text-xs">
+<span>Adó: 8401234567</span>
+<span>•</span>
+<span>TAJ: 042-891-234</span>
+</div>
+</div>
+</td>
+<td class="py-2 px-3">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium border border-outline-variant/40">
+                  Alkalmi munka (AM)
+                </span>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-numeric-table text-xs">
+<span class="text-on-surface font-semibold">84 / 120 nap</span>
+<span class="text-outline">70%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 70%"></div>
+</div>
+</div>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col">
+<span class="font-numeric-table text-xs text-on-surface font-medium">08:00 - 18:00</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">9.5h • 1.5h túlóra</span>
+</div>
+</td>
+<td class="py-2 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-numeric-table text-sm font-bold text-on-surface">25 000 Ft</span>
+<span class="font-label-sm text-label-sm text-outline">2 631 Ft/óra</span>
+</div>
+</td>
+<td class="py-2 px-3">
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed/40 text-primary font-label-sm text-label-sm font-semibold">
+                  25 év alatti SZJA
+                </span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-container font-label-sm text-label-sm font-bold border border-secondary-fixed">
+<span class="material-symbols-outlined text-xs">check_circle</span> FOGLALKOZTATHATÓ
+                </span>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="h-7 px-2.5 bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm rounded transition-colors inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">send</span> Beküldve
+                </button>
+</td>
+</tr>
+<!-- Row 2: Horváth Péter (Warning, almost at 120-day limit) -->
+<tr class="hover:bg-tertiary-fixed/10 transition-colors h-11 bg-tertiary-fixed/5">
+<td class="py-2 px-3">
+<input checked="" class="w-3.5 h-3.5 rounded border-outline cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-bold text-on-surface">Horváth Péter</span>
+<div class="flex items-center gap-2 text-outline font-numeric-table text-xs">
+<span>Adó: 8419823412</span>
+<span>•</span>
+<span>TAJ: 055-123-987</span>
+</div>
+</div>
+</td>
+<td class="py-2 px-3">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium border border-outline-variant/40">
+                  Alkalmi munka (AM)
+                </span>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-numeric-table text-xs">
+<span class="text-tertiary font-bold">118 / 120 nap</span>
+<span class="text-tertiary font-bold">2 nap maradt!</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 98.3%"></div>
+</div>
+</div>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col">
+<span class="font-numeric-table text-xs text-on-surface font-medium">06:00 - 14:30</span>
+<span class="font-label-sm text-label-sm text-outline">8.0h normál</span>
+</div>
+</td>
+<td class="py-2 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-numeric-table text-sm font-bold text-on-surface">21 000 Ft</span>
+<span class="font-label-sm text-label-sm text-outline">2 625 Ft/óra</span>
+</div>
+</td>
+<td class="py-2 px-3">
+<span class="font-label-sm text-label-sm text-outline-variant font-medium">Nincs</span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-bold border border-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-xs">warning</span> KERET HATÁRON
+                </span>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="h-7 px-2.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm rounded transition-colors inline-flex items-center gap-1 border border-outline-variant/40">
+<span class="material-symbols-outlined text-xs">verified</span> Engedélyez
+                </button>
+</td>
+</tr>
+<!-- Row 3: Tóth Balázs (Agricultural seasonal work) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors h-11">
+<td class="py-2 px-3">
+<input checked="" class="w-3.5 h-3.5 rounded border-outline cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-bold text-on-surface">Tóth Balázs</span>
+<div class="flex items-center gap-2 text-outline font-numeric-table text-xs">
+<span>Adó: 8398712390</span>
+<span>•</span>
+<span>TAJ: 031-789-456</span>
+</div>
+</div>
+</td>
+<td class="py-2 px-3">
+<span class="inline-block px-2 py-0.5 rounded bg-secondary-fixed/30 text-on-secondary-fixed-variant font-label-sm text-label-sm font-medium border border-secondary-fixed">
+                  Mezőgazdasági idény
+                </span>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-numeric-table text-xs">
+<span class="text-on-surface font-semibold">42 / 120 nap</span>
+<span class="text-secondary font-semibold">35%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 35%"></div>
+</div>
+</div>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col">
+<span class="font-numeric-table text-xs text-on-surface font-medium">07:00 - 15:30</span>
+<span class="font-label-sm text-label-sm text-outline">8.0h normál</span>
+</div>
+</td>
+<td class="py-2 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-numeric-table text-sm font-bold text-on-surface">18 500 Ft</span>
+<span class="font-label-sm text-label-sm text-outline">2 312 Ft/óra</span>
+</div>
+</td>
+<td class="py-2 px-3">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">
+                  30 év alatti anyák
+                </span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-container font-label-sm text-label-sm font-bold border border-secondary-fixed">
+<span class="material-symbols-outlined text-xs">check_circle</span> FOGLALKOZTATHATÓ
+                </span>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="h-7 px-2.5 bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm rounded transition-colors inline-flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-xs">send</span> NAV Bejelentés
+                </button>
+</td>
+</tr>
+<!-- Row 4: Varga László (CRITICAL ERROR: Over 120-day limit) -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors h-11 border-l-4 border-l-error">
+<td class="py-2 px-3">
+<input class="w-3.5 h-3.5 rounded border-outline cursor-not-allowed opacity-50" disabled="" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-bold text-error">Varga László</span>
+<div class="flex items-center gap-2 text-outline font-numeric-table text-xs">
+<span>Adó: 8456123489</span>
+<span>•</span>
+<span>TAJ: 068-456-123</span>
+</div>
+</div>
+</td>
+<td class="py-2 px-3">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium border border-outline-variant/40">
+                  Alkalmi munka (AM)
+                </span>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-numeric-table text-xs">
+<span class="text-error font-bold">121 / 120 nap</span>
+<span class="text-error font-bold">Túllépve!</span>
+</div>
+<div class="w-full bg-error-container h-1 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col">
+<span class="font-numeric-table text-xs text-on-surface font-medium">08:00 - 16:30</span>
+<span class="font-label-sm text-label-sm text-outline">8.0h (Blokkolva)</span>
+</div>
+</td>
+<td class="py-2 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-numeric-table text-sm font-bold text-on-surface">20 000 Ft</span>
+<span class="font-label-sm text-label-sm text-outline">2 500 Ft/óra</span>
+</div>
+</td>
+<td class="py-2 px-3">
+<span class="font-label-sm text-label-sm text-outline-variant font-medium">Nincs</span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold shadow-xs">
+<span class="material-symbols-outlined text-xs">block</span> ✖ TÚLLÉPVE (120n)
+                </span>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="h-7 px-2.5 bg-error text-on-error hover:bg-on-error-container font-label-sm text-label-sm rounded transition-colors inline-flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-xs">build</span> Átminősítés
+                </button>
+</td>
+</tr>
+<!-- Row 5: Kiss Zsuzsanna (Approved) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors h-11">
+<td class="py-2 px-3">
+<input checked="" class="w-3.5 h-3.5 rounded border-outline cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-bold text-on-surface">Kiss Zsuzsanna</span>
+<div class="flex items-center gap-2 text-outline font-numeric-table text-xs">
+<span>Adó: 8423984123</span>
+<span>•</span>
+<span>TAJ: 049-321-654</span>
+</div>
+</div>
+</td>
+<td class="py-2 px-3">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium border border-outline-variant/40">
+                  Filmipari statiszta
+                </span>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-numeric-table text-xs">
+<span class="text-on-surface font-semibold">15 / 120 nap</span>
+<span class="text-secondary font-semibold">12%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 12%"></div>
+</div>
+</div>
+</td>
+<td class="py-2 px-3">
+<div class="flex flex-col">
+<span class="font-numeric-table text-xs text-on-surface font-medium">09:00 - 19:30</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">10h • 2h túlóra</span>
+</div>
+</td>
+<td class="py-2 px-3 text-right">
+<div class="flex flex-col items-end">
+<span class="font-numeric-table text-sm font-bold text-on-surface">28 000 Ft</span>
+<span class="font-label-sm text-label-sm text-outline">2 800 Ft/óra</span>
+</div>
+</td>
+<td class="py-2 px-3">
+<span class="font-label-sm text-label-sm text-outline-variant font-medium">Nincs</span>
+</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-container font-label-sm text-label-sm font-bold border border-secondary-fixed">
+<span class="material-symbols-outlined text-xs">check_circle</span> FOGLALKOZTATHATÓ
+                </span>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="h-7 px-2.5 bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm rounded transition-colors inline-flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-xs">send</span> NAV Bejelentés
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer with Pagination & Batch Actions -->
+<div class="p-space-md border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-3 bg-surface-container-low/40">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Kiválasztva: <strong class="text-on-surface">4 / 5</strong> tétel</span>
+<span class="text-outline text-xs">|</span>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold">Összes kijelölése a telephelyen</button>
+</div>
+<div class="flex items-center gap-1.5 font-numeric-table text-xs">
+<span class="text-on-surface-variant mr-1">1 - 5 / 12 találat</span>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-surface-container-lowest border border-outline-variant/40 disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-xs">chevron_left</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-primary text-on-primary font-bold">1</button>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-surface-container-lowest border border-outline-variant/40 hover:bg-surface-container">2</button>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-surface-container-lowest border border-outline-variant/40 hover:bg-surface-container">3</button>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-surface-container-lowest border border-outline-variant/40">
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- COLUMN B: SIDEBAR FOR DIGITAL ONBOARDING & HITL VERIFICATION (~30%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Panel Header & Active Review Card -->
+<div class="bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/30 flex flex-col overflow-hidden">
+<div class="p-space-md border-b border-outline-variant/20 flex items-center justify-between bg-surface-bright">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">assignment_ind</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Digitális Beléptetés</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 3 függőben
+          </span>
+</div>
+<div class="p-space-md flex flex-col gap-3">
+<!-- Candidate Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold font-headline-md">
+                NÉ
+              </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-bold text-on-surface">Nagy Éva</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Raktáros pozíció (FEOR: 9223)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-outline font-medium">2 órája beküldve</span>
+</div>
+<div class="text-xs font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">calendar_month</span>
+<span>Munkába állás tervezett napja: <strong class="text-on-surface">2026.10.01.</strong></span>
+</div>
+<!-- KYC & Document OCR Checklist -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-2 border border-outline-variant/30">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant font-bold">Automata Okmány & KYC Szűrés</span>
+<div class="flex items-center justify-between text-xs font-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Személyi igazolvány</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-secondary">OCR 99% (Valid)</span>
+</div>
+<div class="flex items-center justify-between text-xs font-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Lakcímkártya & TAJ szám</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-secondary">Érvényes</span>
+</div>
+<div class="flex items-center justify-between text-xs font-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Adóazonosító jel</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">NAV lekérdezve ✓</span>
+</div>
+</div>
+<!-- Smart Contract Preview Card -->
+<div class="p-2.5 rounded bg-surface-bright border border-outline-variant/30 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">description</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Munkaszerződés v1.0</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed/50 text-on-secondary-fixed text-[10px] font-bold">AI Sablon Generálva</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+              Bruttó alapbér: <strong class="text-on-surface">420 000 Ft/hó</strong> • Határozatlan idejű • 3 hónap próbaidő • Heti 40 órás normál munkarend
+            </p>
+</div>
+<!-- Review Action CTA Buttons -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center gap-2">
+<button class="flex-1 h-8 px-2.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded border border-outline-variant/40 flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>Szerződés (PDF)</span>
+</button>
+<button class="h-8 px-2 text-outline hover:text-on-surface font-label-md text-label-md transition-colors">
+                Módosítás
+              </button>
+</div>
+<button class="w-full h-9 bg-secondary hover:bg-on-secondary-container text-on-secondary font-headline-md text-label-md rounded flex items-center justify-center gap-2 transition-colors shadow-sm font-semibold">
+<span class="material-symbols-outlined text-base">how_to_reg</span>
+<span>Jóváhagyás & NAV T1041 Beküldés</span>
+</button>
+</div>
+</div>
+<!-- Next in Queue Divider & Mini Item -->
+<div class="p-space-md border-t border-outline-variant/20 bg-surface-container-low/30 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Soron következő (Queue)</span>
+<div class="p-2 bg-surface-container-lowest rounded border border-outline-variant/20 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-label-md font-semibold text-on-surface">Molnár Gergő</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">90% Kitöltve</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Villanyszerelő (FEOR: 7524)</span>
+<div class="flex items-center justify-between pt-1 text-xs">
+<span class="text-error font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">pending</span> Orvosi igazolás hiányzik
+              </span>
+<a class="text-primary hover:underline font-semibold font-label-sm text-label-sm" href="#">Emlékeztető küldése</a>
+</div>
+</div>
+<div class="p-2 bg-surface-container-lowest rounded border border-outline-variant/20 flex items-center justify-between opacity-75">
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-semibold text-on-surface">Szabó Bence</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Targoncakezelő • Okmányok beérkeztek</span>
+</div>
+<button class="h-7 px-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded transition-colors">
+              Áttekintés
+            </button>
+</div>
+</div>
+</div>
+<!-- Statutory Compliance Help Module -->
+<div class="p-space-md rounded-lg bg-surface-container border border-outline-variant/30 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5">gavel</span>
+<div class="flex flex-col gap-1">
+<span class="font-headline-md text-label-md font-bold text-on-surface">2026 EFO Törvényi Változások</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Az alkalmi munkavállalás napi közterhe szinkronizálva a minimálbérhez. A rendszer automatikusan ellenőrzi a mentesített keretösszegeket (max. 17 719 Ft/nap SZJA-mentes).
+          </p>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold mt-1 inline-flex items-center gap-0.5" href="#">
+            NAV Tájékoztató megnyitása <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: STATUTORY AUDIT & STATUS FOOTER BAR -->
+<div class="p-space-sm px-space-md bg-surface-container-lowest border border-outline-variant/30 rounded-lg flex flex-wrap items-center justify-between gap-3 text-on-surface-variant font-label-sm text-label-sm shadow-xs">
+<div class="flex items-center gap-2">
+<span class="inline-flex w-2 h-2 rounded-full bg-secondary"></span>
+<span>Jogszabályi verzió: <strong class="text-on-surface">2026/Q3 NAV v3.0 Integráció</strong> aktív</span>
+<span class="text-outline">|</span>
+<span>Utolsó 2608-as bevallás csomag generálva: <span class="text-on-surface font-medium">2026.09.12. (Sikeres átvételi nyugta #98231)</span></span>
+</div>
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-xs text-secondary">lock</span>
+        256-bit Titkosított felhő tárolás (GDPR megfelelőség)
+      </span>
+<button class="text-primary hover:underline font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">history</span> Audit Log
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Simple table check/uncheck count reactivity for BérFlow dashboard
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]:not(:disabled)');
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        const checkedCount = document.querySelectorAll('tbody input[type="checkbox"]:checked').length;
+        const total = checkboxes.length;
+        const counterText = document.querySelector('strong.text-on-surface');
+        if (counterText) {
+          counterText.textContent = `${checkedCount} / ${total}`;
+        }
+      });
+    });
+  });
+</script></main></div></body></html>

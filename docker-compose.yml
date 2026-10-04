@@ -1,0 +1,16 @@
+name: berflow
+
+services:
+  berflow:
+    build: .
+    container_name: berflow-app
+    restart: unless-stopped
+    ports:
+      - "3100:3000"
+    mem_limit: 400m
+    networks:
+      - berflow-net
+
+networks:
+  berflow-net:
+    name: berflow-net
